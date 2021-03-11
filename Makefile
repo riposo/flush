@@ -9,4 +9,4 @@ staticcheck:
 build: plugin.so
 
 plugin.so: go.mod go.sum $(shell find . ../riposo/ -name '*.go')
-	go build -trimpath -ldflags '-s -w' -buildmode=plugin -o $@ .
+	go build -ldflags '-s -w' -buildmode=plugin -o $@ .
