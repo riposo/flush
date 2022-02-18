@@ -28,7 +28,7 @@ var _ = Describe("Flush handler", func() {
 	})
 
 	AfterEach(func() {
-		Expect(txn.Abort()).To(Succeed())
+		Expect(txn.Rollback()).To(Succeed())
 	})
 
 	It("should flush and serve", func() {
